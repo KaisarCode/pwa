@@ -22,13 +22,13 @@
           "purpose": "maskable any"
         },
         {
-          "src": "img/meta/icon-286x286.png",
+          "src": "img/meta/icon-512x512.png",
           "sizes": "512x512",
           "type": "image/png",
           "purpose": "maskable any"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#222222",
+    "background_color": "#222222",
     "display": "standalone"
 }
