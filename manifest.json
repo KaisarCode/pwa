@@ -4,12 +4,14 @@
   "icons": [{
     "src": "img/out/icon-192x192.png",
     "sizes": "192x192",
-    "type": "image/png"
+    "type": "image/png",
+    "purpose": "any maskable"
   },
   {
     "src": "img/out/icon-512x512.png",
     "sizes": "512x512",
-    "type": "image/png"
+    "type": "image/png",
+    "purpose": "any maskable"
   }],
   "gcm_sender_id": "",
   "gcm_user_visible_only": true,
