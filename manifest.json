@@ -20,6 +20,7 @@
     "gcm"
   ],
   "scope": "/",
+  "start_url": "/",
   "orientation": "portrait",
   "display": "standalone",
   "theme_color": "#ffffff",
