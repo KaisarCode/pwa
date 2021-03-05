@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1,minimum-scale=1,maximum-scale=10,user-scalable=yes">
         <meta name="description" content="Description">
         <meta name="keywords" content="Keywords">
         <title>Page Title</title>
         
         <!-- Android  -->
-        <meta name="theme-color" content="red">
+        <meta name="theme-color" content="black">
         <meta name="mobile-web-app-capable" content="yes">
 
         <!-- iOS -->
