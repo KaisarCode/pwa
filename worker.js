@@ -1,39 +1,35 @@
 const cache_name = 'v1';
-const cache_assets = [
-    '.',
-    'js/app.js',
-    'css/app.css'
-];
 
 // Install
-self.addEventListener('install', (e) => {
-    e.waitUntil(
-        caches
-        .open(cache_name).then(cache => {
-            // Add cache
-            cache.addAll(cache_assets);
-        }).then(() => self.skipWaiting())
-    );
+self.addEventListener('install', e => {
 });
 
 // Activate
-self.addEventListener('activate', (e) => {
+self.addEventListener('activate', e => {
     e.waitUntil(
         caches.keys().then(cache_names => {
-            cache_names.map(cache => {
-                if (cache !== cache_name) {
-                    // Update cache
-                    caches.delete(cache);
-                }
-            });
+            return Promise.all(
+                cache_names.map(cache => {
+                    if (cache !== cache_name) {
+                        // Clear old cache
+                        return caches.delete(cache);
+                    }
+                })
+            );
         })
     );
 });
 
-// Fetch content
+// Fetch
 self.addEventListener('fetch', e => {
     e.respondWith(
-        fetch(e.request)
-        .catch(() => { caches.match(e.request) })
+        fetch(e.request).then(res => {
+            // Save cache
+            const res_clone = res.clone();
+            caches.open(cache_name).then(cache => {
+                cache.put(e.request, res_clone);
+            });
+            return res;
+        }).catch(err => caches.match(e.request).then(res => res))
     );
 });

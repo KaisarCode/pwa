@@ -113,15 +113,5 @@
                 --pwacompat-splash-font: 24px sans-serif;
             }
         </style>
-        
-        <!-- Load Service Worker -->
-        <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker
-                .register('worker.js');
-            });
-        }
-        </script>
     </body>
 </html>
