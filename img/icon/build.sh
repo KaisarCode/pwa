@@ -27,6 +27,7 @@ convert -resize 384x384 -background $ibg -gravity center -extent 384x384 $src/ic
 convert -resize 512x512 -background $ibg -gravity center -extent 512x512 $src/icon.svg $out/icon-512x512.png;
 
 convert -resize 70x70 -background $ibg -gravity center -extent 70x70 $src/mstile.svg $out/mstile-70x70.png;
+convert -resize 144x144 -background $ibg -gravity center -extent 144x144 $src/mstile.svg $out/mstile-144x144.png;
 convert -resize 270x270 -background $ibg -gravity center -extent 270x270 $src/mstile.svg $out/mstile-270x270.png;
 convert -resize 310x310 -background $ibg -gravity center -extent 310x310 $src/mstile.svg $out/mstile-310x310.png;
 convert -resize 310x150 -background $ibg -gravity center -extent 310x150 $src/mstile.svg $out/mstile-310x150.png;
