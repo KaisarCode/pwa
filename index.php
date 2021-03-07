@@ -74,8 +74,8 @@
         <link href="img/icon/icon-192x192.png" rel="icon" sizes="192x192">
         <link href="img/icon/icon-128x128.png" rel="icon" sizes="128x128">
 
-        <!-- Others -->
-        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <!-- Legacy favicon -->
+        <link href="img/icon/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
         <!-- UC Browser  -->
         <link href="img/icon/icon-52x52.png" rel="apple-touch-icon-precomposed" sizes="57x57">
