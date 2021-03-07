@@ -27,7 +27,12 @@ self.addEventListener('fetch', e => {
             // Save cache
             const res_clone = res.clone();
             caches.open(cache_name).then(cache => {
-                cache.put(e.request, res_clone);
+                var url = e.request.url;
+                // Filter files
+                // ... all by default
+                
+                // Add to cache
+                cache.put(url, res_clone);
             });
             return res;
         }).catch(err => caches.match(e.request).then(res => res))
