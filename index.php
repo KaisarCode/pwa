@@ -52,34 +52,34 @@
         <meta name="screen-orientation" content="portrait">
         
         <!-- Main Link Tags  -->
-        <link href="img/icon/out/icon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-        <link href="img/icon/out/icon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-        <link href="img/icon/out/icon-48x48.png" rel="icon" type="image/png" sizes="48x48">
-        <link href="img/icon/out/icon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+        <link href="img/icon/icon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+        <link href="img/icon/icon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+        <link href="img/icon/icon-48x48.png" rel="icon" type="image/png" sizes="48x48">
+        <link href="img/icon/icon-96x96.png" rel="icon" type="image/png" sizes="96x96">
 
         <!-- iOS  -->
-        <link href="img/icon/out/icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
-        <link href="img/icon/out/icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
-        <link href="img/icon/out/icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
-        <link href="img/icon/out/icon-167x167.png" rel="apple-touch-icon" sizes="167x167">
-        <link href="img/icon/out/icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+        <link href="img/icon/icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+        <link href="img/icon/icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+        <link href="img/icon/icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+        <link href="img/icon/icon-167x167.png" rel="apple-touch-icon" sizes="167x167">
+        <link href="img/icon/icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
 
         <!-- Startup Image  -->
-        <link href="img/icon/out/icon-320x480.png" rel="apple-touch-startup-image">
+        <link href="img/icon/icon-320x480.png" rel="apple-touch-startup-image">
 
         <!-- Pinned Tab  -->
-        <link href="img/icon/out/safari.svg" rel="mask-icon" size="any" color="red">
+        <link href="img/icon/safari.svg" rel="mask-icon" size="any" color="red">
 
         <!-- Android  -->
-        <link href="img/icon/out/icon-192x192.png" rel="icon" sizes="192x192">
-        <link href="img/icon/out/icon-128x128.png" rel="icon" sizes="128x128">
+        <link href="img/icon/icon-192x192.png" rel="icon" sizes="192x192">
+        <link href="img/icon/icon-128x128.png" rel="icon" sizes="128x128">
 
         <!-- Others -->
         <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 
         <!-- UC Browser  -->
-        <link href="img/icon/out/icon-52x52.png" rel="apple-touch-icon-precomposed" sizes="57x57">
-        <link href="img/icon/out/icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+        <link href="img/icon/icon-52x52.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+        <link href="img/icon/icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
 
         <!-- Manifest.json  -->
         <link href="manifest.json" rel="manifest">

@@ -1,7 +1,7 @@
-src=src;
-out=out;
-ibg=none;
-sbg=none;
+src='src';
+out='.';
+ibg='none';
+sbg='none';
 
 echo 'Generating...';
 cp $src/safari.svg $out/safari.svg;

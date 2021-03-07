@@ -2,13 +2,13 @@
   "name": "app name",
   "short_name": "short name",
   "icons": [{
-    "src": "img/icon/out/icon-192x192.png",
+    "src": "img/icon/icon-192x192.png",
     "sizes": "192x192",
     "type": "image/png",
     "purpose": "any maskable"
   },
   {
-    "src": "img/icon/out/icon-512x512.png",
+    "src": "img/icon/icon-512x512.png",
     "sizes": "512x512",
     "type": "image/png",
     "purpose": "any maskable"
@@ -19,7 +19,7 @@
     "gcm"
   ],
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/pwa",
   "orientation": "portrait",
   "display": "standalone",
   "theme_color": "#ffffff",
