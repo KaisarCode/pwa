@@ -39,11 +39,10 @@
         <!-- Enable night mode  -->
         <meta name="nightmode" content="enable/disable">
 
-        <!-- Fitscreen  -->
-        <meta name="viewport" content="uc-fitscreen=yes">
-
         <!-- Layout mode -->
         <meta name="layoutmode" content="fitscreen/standard">
+        <meta name="viewport" content="uc-fitscreen=yes">
+        <meta name="viewport" content="viewport-fit=cover">
 
         <!-- imagemode - show image even in text only mode  -->
         <meta name="imagemode" content="force">
@@ -84,8 +83,9 @@
         <!-- Manifest.json  -->
         <link href="manifest.json" rel="manifest">
         
-        <!-- App CSS -->
+        <!-- APP CSS/JS -->
         <link href="css/app.css" rel="stylesheet" type="text/css" />
+        <script src="js/app.js"></script>
         
     </head>
     <body>
@@ -101,26 +101,5 @@
         <footer>
             <small><i>&copy; KaisarCode.com</i></small>
         </footer>
-        
-        <!-- App JS -->
-        <script src="js/app.js"></script>
-        
-        <!-- PWA Compat -->
-        <meta name="viewport" content="viewport-fit=cover">
-        <script async src="https://cdn.jsdelivr.net/npm/pwacompat" crossorigin="anonymous"></script>
-        <style>
-            link[rel="manifest"] {
-                --pwacompat-splash-font: 24px sans-serif;
-            }
-        </style>
-        <script>
-        // Load Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker
-                .register('worker.js', { scope:'.' });
-            });
-        }
-        </script>
     </body>
 </html>
