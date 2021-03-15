@@ -31,5 +31,3 @@ if ('serviceWorker' in navigator) {
         window.deferredPrompt = null;
     });
 })();
-
-
