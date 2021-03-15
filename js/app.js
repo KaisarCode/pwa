@@ -7,7 +7,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // Install
-(function(){
+document.addEventListener('DOMContentLoaded', function(){
     var btn = document.getElementById('install');
     
     // Defer prompt
@@ -30,4 +30,4 @@ if ('serviceWorker' in navigator) {
     window.addEventListener('appinstalled', (event) => {
         window.deferredPrompt = null;
     });
-})();
+});
