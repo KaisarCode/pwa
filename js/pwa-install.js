@@ -1,17 +1,5 @@
-// Redirect to HTTPS
-if (location.protocol == 'http:')
-location.href = location.href.replace(/^http:/, 'https:');
-
-// Load Service Worker
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker
-        .register('worker.js', { scope:'.' });
-    });
-}
-
 // Install
-document.addEventListener('DOMContentLoaded', function(){
+(function(){
     var btn = document.getElementById('install');
     
     // Defer prompt
@@ -34,4 +22,4 @@ document.addEventListener('DOMContentLoaded', function(){
     window.addEventListener('appinstalled', (event) => {
         window.deferredPrompt = null;
     });
-});
+})();

@@ -40,9 +40,9 @@
         <meta name="nightmode" content="enable/disable">
 
         <!-- Layout mode -->
-        <meta name="layoutmode" content="fitscreen/standard">
+        <!--<meta name="layoutmode" content="fitscreen/standard">
         <meta name="viewport" content="uc-fitscreen=yes">
-        <meta name="viewport" content="viewport-fit=cover">
+        <meta name="viewport" content="viewport-fit=cover">-->
 
         <!-- imagemode - show image even in text only mode  -->
         <meta name="imagemode" content="force">
@@ -83,11 +83,11 @@
         <!-- Manifest.json  -->
         <link href="manifest.json" rel="manifest">
         
-        <!-- APP CSS -->
-        <link href="css/app.css" rel="stylesheet" type="text/css" />
+        <!-- PWA Styles -->
+        <link href="css/pwa.css" rel="stylesheet" type="text/css" />
         
-        <!-- APP JS -->
-        <script src="js/app.js"></script>
+        <!-- Load service worker -->
+        <script src="js/sw-load.js"></script>
     </head>
     <body>
         
@@ -103,5 +103,6 @@
         <footer>
             <small><i>&copy; KaisarCode.com</i></small>
         </footer>
+        <script src="js/pwa-install.js"></script>
     </body>
 </html>
