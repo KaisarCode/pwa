@@ -3,9 +3,10 @@
     var btn = document.getElementById('install');
     
     // Defer prompt
-    window.addEventListener('beforeinstallprompt', (event) => {
-        window.deferredPrompt = event;
-        btn.classList.toggle('hidden', false);
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        window.deferredPrompt = e;
+        btn.classList.toggle('show', true);
     });
     
     // Call prompt
@@ -15,11 +16,11 @@
         promptEvent.prompt();
         const result = await promptEvent.userChoice;
         window.deferredPrompt = null;
-        btn.classList.toggle('hidden', true);
+        btn.classList.toggle('show', false);
     });
     
     // Clear prompt
-    window.addEventListener('appinstalled', (event) => {
+    window.addEventListener('appinstalled', (e) => {
         window.deferredPrompt = null;
     });
 })();

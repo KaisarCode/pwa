@@ -1,8 +1,11 @@
+#install {
+    display: none;
+}
+.show {
+    display: block!important;
+}
 @media all and (display-mode: standalone) {
     #install {
-        display: none;
+        display: none!important;
     }
-}
-.hidden {
-    display: none;
 }
