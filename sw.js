@@ -11,6 +11,7 @@ let files = [
     './img/icon/icon-192x192.png',
 ];
 self.addEventListener('install', e => {
+    self.skipWaiting();
     e.waitUntil(
         caches.open(cache_name).then(cache => {
             return cache.addAll(files);
@@ -29,4 +30,16 @@ self.addEventListener('fetch', e => {
             }); return res;
         }).catch(err => caches.match(e.request).then(res => res))
     );
+});
+
+// Clear
+self.addEventListener('activate', e => {
+    self.skipWaiting();
+    e.waitUntil(
+    caches.keys(cache_name).then(keys => {
+        keys.map(n => {
+            if (n !== cache_name)
+            return caches.delete(n);
+        });
+    }));
 });
