@@ -22,7 +22,6 @@ self.addEventListener('install', e => {
 self.addEventListener('fetch', e => {
     e.respondWith(
         fetch(e.request).then(res => {
-            // Save cache
             const res_clone = res.clone();
             caches.open(cache_name).then(cache => {
                 var url = e.request.url;
