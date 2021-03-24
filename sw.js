@@ -1,46 +1,54 @@
-const cache_name = 'files';
+// Cache version
+const CACHE_VER = 'V1';
 
-// Cache 1
-let files = [
-    './',
-    './css/pwa.css',
-    './manifest.json',
-    './js/sw-load.js',
-    './js/pwa-install.js',
-    './img/icon/favicon.ico',
-    './img/icon/icon-192x192.png',
-];
-self.addEventListener('install', e => {
+// Precache
+self.addEventListener('install', function(e){
     self.skipWaiting();
-    e.waitUntil(
-        caches.open(cache_name).then(cache => {
-            return cache.addAll(files);
+    e.waitUntil(caches
+    .open(CACHE_VER)
+    .then(function(cache) {
+        return cache.addAll([
+        './',
+        './css/pwa.css',
+        './manifest.json',
+        './js/sw-load.js',
+        './js/pwa-install.js',
+        './img/icon/favicon.ico',
+        './img/icon/icon-192x192.png',
+        './img/icon/icon-256x256.png',
+        './img/icon/icon-384x384.png',
+        './img/icon/icon-512x512.png',
+        ]);
+    }));
+});
+
+// Serve cache only
+self.addEventListener('fetch', function(e) {
+    e.respondWith(caches
+        .open(CACHE_VER)
+        .then(function(cache) {
+            var req = e.request;
+            return cache.match(req)
+            .then(function(res) {
+                return res || fetch(req)
+                .then(function(nres) {
+                    var res = nres.clone();
+                    cache.put(req, res);
+                    return nres;
+                }).catch(function(){});
+            }).catch(function(){});
         })
     );
 });
 
-// Cache 2
-self.addEventListener('fetch', e => {
-    e.respondWith(
-        fetch(e.request).then(res => {
-            const res_clone = res.clone();
-            caches.open(cache_name).then(cache => {
-                var url = e.request.url;
-                cache.put(url, res_clone);
-            }); return res;
-        }).catch(err => caches.match(e.request).then(res => {
-            return res;
-        }))
-    );
-});
-
-// Clear
-self.addEventListener('activate', e => {
+// Reset cache if version changes
+self.addEventListener('activate', function(e) {
     self.skipWaiting();
-    e.waitUntil(
-    caches.keys(cache_name).then(keys => {
-        keys.map(n => {
-            if (n !== cache_name)
+    e.waitUntil(caches
+    .keys(CACHE_VER)
+    .then(function(keys) {
+        keys.map(function(n) {
+            if (n !== CACHE_VER)
             return caches.delete(n);
         });
     }));
