@@ -22,7 +22,7 @@ self.addEventListener('install', function(e){
     }));
 });
 
-// Serve cache only
+// Serve cache first
 self.addEventListener('fetch', function(e) {
     e.respondWith(caches
         .open(CACHE_VER)
@@ -30,12 +30,13 @@ self.addEventListener('fetch', function(e) {
             var req = e.request;
             return cache.match(req)
             .then(function(res) {
-                return res || fetch(req)
+                var net = fetch(req)
                 .then(function(nres) {
                     var res = nres.clone();
                     cache.put(req, res);
                     return nres;
                 }).catch(function(){});
+                return res || net;
             }).catch(function(){});
         })
     );

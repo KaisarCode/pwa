@@ -15,6 +15,7 @@ Here are some example strategies to serve content from cache.
 
 **Cache only**
 ```
+// Serve cache only
 self.addEventListener('fetch', function(e) {
     e.respondWith(caches
         .open(CACHE_VER)
@@ -36,6 +37,7 @@ self.addEventListener('fetch', function(e) {
 
 **Cache first**
 ```
+// Serve cache first
 self.addEventListener('fetch', function(e) {
     e.respondWith(caches
         .open(CACHE_VER)
@@ -58,6 +60,7 @@ self.addEventListener('fetch', function(e) {
 
 **Network first**
 ```
+// Serve network first
 self.addEventListener('fetch', function(e) {
     e.respondWith(caches
         .open(CACHE_VER)
